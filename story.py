@@ -3,6 +3,7 @@ import google.generativeai as genai
 
 # Set your API key here securely
 def run():
+    st.set_page_config(page_title="Motivational Chatbot")
     API_KEY = "AIzaSyCX5TKAFYkpT3JLnEa0_alXNjwYpe_-S2E"  # Add your Gemini API key
     genai.configure(api_key=API_KEY)
 
@@ -10,7 +11,7 @@ def run():
     model = genai.GenerativeModel("gemini-1.5-flash")
 
     # Streamlit Page UI
-    st.set_page_config(page_title="Motivational Chatbot")
+    
     st.title("💬 Motivational Story Chatbot")
     st.write("Tell me what's on your mind, and I’ll share a story that might lift you up! 💙")
 
